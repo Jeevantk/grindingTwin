@@ -122,6 +122,11 @@
                 ctx.rotate(-90 * Math.PI / 180);""
                 ctx.fillText(this.datasets[0].label, 0, 0);
                 
+                ctx.beginPath();
+                ctx.moveTo(-180, 400);
+                ctx.strokeStyle = '#ff0000';
+                ctx.lineTo(180, 400);
+                ctx.stroke();
                 ctx.restore();
             }
         });
