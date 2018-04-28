@@ -20,12 +20,9 @@ function MainViewModel(data) {
   
   self.lineChartDataTemp = ko.observable({
     labels : ["1","2","3","4","5","6","7","8","9"],
-    title: {
-        display: true,
-        text: 'Custom Chart Title'
-    },
     datasets : [
       {
+        label: "Spindle Drive Current (A)", 
         fillColor : "rgba(151,187,205,0.5)",
         strokeColor : "rgba(151,187,205,1)",
         pointColor : "rgba(151,187,205,1)",
@@ -54,13 +51,7 @@ function MainViewModel(data) {
     self.displayCurrentStatictics();
   });
 
-  var options1={
-    title: {
-      display: true,
-      text: 'Custom Chart Title'
-  }
-  
-  }
+
   
   self.initLine = function() {
     var options = {
@@ -71,7 +62,7 @@ function MainViewModel(data) {
 
 
     var ctxTemp = $("#canvasTemp").get(0).getContext("2d");
-    var myLineTemp = new Chart(ctxTemp).Line( vm.lineChartDataTemp(), options1 );
+    var myLineTemp = new Chart(ctxTemp).Line( vm.lineChartDataTemp(), options );
   }
   
 }
