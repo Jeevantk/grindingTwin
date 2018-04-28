@@ -237,13 +237,36 @@ body{
 
 .left{
     float:left;
-    margin:30px;
+    margin-left:0px;
+}
+
+.imagePosition{
+    /* float:left; */
+    margin-left:0px;
+    width: 330px;
+    heigth: 600px;
+    /* max-width: 25%;
+    max-height: 50%; */
+}
+.ChartPosition{
+    /* float:left; */
+    margin-left:100px;
+    max-width: 100%;
+    max-height: 100%;
 }
 .inputForm{
     margin:30px;
 }
 
+.right{
+    float:right;
+    margin:30px;
+}
 #button1 , #button2 {
     display:inline-block;
     /**other codes**/
+}
+
+.moveRight{
+    margin-left:300px;
 }

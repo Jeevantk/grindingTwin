@@ -34,7 +34,7 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a id="loginclick"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a id="loginclick"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -69,15 +69,15 @@
         </div>
     </div>
     <div>
-        <iframe src="./test4.html" style="float:right;width:350px;height:350px;"></iframe>
+        <iframe src="./test4.html" style="float:right;width:330px;height:350px;margin-top:70px"></iframe>
     </div>
 
-
+    <h1 class=moveRight>Digital Clone - Grinding Wheel</h1>
 
     <div class="tab">
-        <button class="tablinks actve" onclick="openTab(event, 'Tempurature')">Tempurature</button>
-        <button class="tablinks " onclick="openTab(event, 'Current')">Current</button>
-        <button class="tablinks" onclick="openTab(event, 'Vibration')">Vibration</button>
+        <button class="tablinks actve" onclick="openTab(event, 'Tempurature')">Set 1</button>
+        <button class="tablinks " onclick="openTab(event, 'Tempurature')">Set 2</button>
+        <button class="tablinks " onclick="openTab(event, 'Tempurature')">Set 3</button>
     </div>
 
 
@@ -90,54 +90,12 @@
 				<canvas id="canvasTemp" height="450" width="600"></canvas>
 			</div>
 			
-		</div>
-        <div id="tempAvg">Average Tempurature Value</div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id="tempMax">Maximum Tempurature</div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id="tempMin">Minimum Tempurature </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        </div>
         
     </div>
 
-    <div id="Current" class="tabcontent">
-
-        
-    	<div class="pure-u-1 left" >
-			<div>
-				<canvas id="canvasCurrent" height="450" width="600"></canvas>
-			</div>
-			
-		</div>
-        <div id="currentAvg">Average Current Value</div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id="currentMax">Maximum Current</div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id="currentMin">Minimum Current </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        
-    </div>
-
-    <div id="Vibration" class="tabcontent">
-      <h3>Vibration</h3>
-      <p>Will be showing Vibration Information Graph</p>
-      <p>Average Value :</p>
-      <p>Variance : </p>
-    </div>
+    <img class="imagePosition" src="data2.png">
+    <img class ="ChartPosition" src="data3.png">
 
 
 

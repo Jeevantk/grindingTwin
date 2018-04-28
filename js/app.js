@@ -19,30 +19,23 @@ function MainViewModel(data) {
   };
   
   self.lineChartDataTemp = ko.observable({
-    labels : ["0","1","2","3","4","5","6","7","8","9"],
+    labels : ["1","2","3","4","5","6","7","8","9"],
+    title: {
+        display: true,
+        text: 'Custom Chart Title'
+    },
     datasets : [
       {
         fillColor : "rgba(151,187,205,0.5)",
         strokeColor : "rgba(151,187,205,1)",
         pointColor : "rgba(151,187,205,1)",
         pointStrokeColor : "#fff",
-        data : [65,59,90,81,56,55,40,28,76,40]
+        data : [1.0431,1.0577,1.059,1.2526,1.2058,1.2859,1.467,1.4623,1.5046]
       }
     ]
   });
 
-  self.lineChartDataCurrent = ko.observable({
-    labels : ["0","1","2","3","4","5","6","7","8","9"],
-    datasets : [
-      {
-        fillColor : "rgba(151,187,205,0.5)",
-        strokeColor : "rgba(151,187,205,1)",
-        pointColor : "rgba(151,187,205,1)",
-        pointStrokeColor : "#fff",
-        data : [27,88,13,97,44,13,79,28,12,67]
-      }
-    ]
-  });
+
   
   socket.on('newTemp', function (data) {
     self.lineChartDataTemp().datasets[0].data.shift();
@@ -60,25 +53,25 @@ function MainViewModel(data) {
     self.initLine();
     self.displayCurrentStatictics();
   });
+
+  var options1={
+    title: {
+      display: true,
+      text: 'Custom Chart Title'
+  }
+  
+  }
   
   self.initLine = function() {
     var options = {
       animation : false,
-      scaleOverride : true,
-      scaleSteps : 10,//Number - The number of steps in a hard coded scale
-      scaleStepWidth : 10,//Number - The value jump in the hard coded scale       
-      scaleStartValue : 10//Number - The scale starting value
+      scaleOverride : false,
     };
     
 
 
     var ctxTemp = $("#canvasTemp").get(0).getContext("2d");
-    var myLineTemp = new Chart(ctxTemp).Line( vm.lineChartDataTemp(), options );
-
-    // var ctxCurrent = $("#canvasCurrent").get(0).getContext("2d");
-    // var myLineCurrent = new Chart(ctxCurrent).Line( vm.lineChartDataCurrent(), options );
-
-
+    var myLineTemp = new Chart(ctxTemp).Line( vm.lineChartDataTemp(), options1 );
   }
   
 }
